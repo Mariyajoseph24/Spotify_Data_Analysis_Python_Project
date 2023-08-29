@@ -6,6 +6,6 @@
   <li><a href="#importrequiredlibraries">Import Required Libraries</a></li>
   <li><a href="#exploringthedataset">Exploring the Dataset</a></li>
   <li><a href="#identifyingnullvaluesinthedataset">Identifying Null Values in the Dataset</a></li>
-  <li><a href="#datasetoverview:rows,columns,datatypes,andmemoryusage">Dataset Overview: Rows, Columns, Data Types, and Memory Usage</a></li>
+  <li><a href="#datasetoverviewrowscolumnsdatatypesandmemoryusage">Dataset Overview: Rows, Columns, Data Types, and Memory Usage</a></li>
   <li><a href="#extractinginsightsfromthedatasetthroughanalysis">Extracting Insights from the Dataset through Analysis</a></li>
 </ul>
