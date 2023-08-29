@@ -9,3 +9,10 @@
   <li><a href="#datasetoverviewrowscolumnsdatatypesandmemoryusage">Dataset Overview: Rows, Columns, Data Types, and Memory Usage</a></li>
   <li><a href="#extractinginsightsfromthedatasetthroughanalysis">Extracting Insights from the Dataset through Analysis</a></li>
 </ul>
+
+<h1><a name="introduction">Introduction</a></h1>
+<h1><a name="importrequiredlibraries">Import Required Libraries</a></h1>
+<h1><a name="exploringthedataset">Exploring the Dataset</a></h1>
+<h1><a name="identifyingnullvaluesinthedataset">Identifying Null Values in the Dataset</a></h1>
+<h1><a name="datasetoverviewrowscolumnsdatatypesandmemoryusage">Dataset Overview: Rows, Columns, Data Types, and Memory Usage</a></h1>
+<h1><a name="extractinginsightsfromthedatasetthroughanalysis">Extracting Insights from the Dataset through Analysis</a></h1>
