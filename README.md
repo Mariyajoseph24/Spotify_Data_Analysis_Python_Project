@@ -80,18 +80,111 @@ sp_feature.info()
   <h1><a name="extractinginsightsfromthedatasetthroughanalysis">Extracting Insights from the Dataset through Analysis</a></h1>
   <ol>
   <li>Exploring the 10 Least Popular Songs in the Spotify Dataset</li>
+
+  ```python
+a=sp_tracks.sort_values('popularity',ascending=True)[0:10]
+a[['name','popularity']]
+```
   <li>Descriptive Statistics </li>
+
+```python
+#descriptive statistics of tracks
+sp_tracks.describe().transpose()
+```
+```python
+#descriptive of feature
+sp_feature.describe().transpose()
+```
   <li>Discovering the Top 10 Popular Songs in the Spotify Dataset</li>
+
+```python
+a=sp_tracks
+b=a[a['popularity']>90].sort_values('popularity',ascending=False)[:10]
+b[['name','popularity','artists']]
+```
   <li>Setting Release Date as the Index Column</li>
+
+```python
+sp_tracks.set_index('release_date',inplace=True)
+sp_tracks.index=pd.to_datetime(sp_tracks.index)
+sp_tracks.head()
+```
   <li>Extracting Artist Name from the 18th Row of the Dataset</li>
+
+```python
+sp_tracks[['artists']].iloc[18]
+```
   <li>Converting Song Duration from Milliseconds to Seconds</li>
+
+```python
+sp_tracks['duration'] = sp_tracks['duration_ms'].apply (lambda x : round(x/1000))
+sp_tracks.drop('duration_ms', inplace = True, axis=1)
+sp_tracks.duration.head()
+```
   <li>Visualization: Pearson Correlation Heatmap for Two Variables</li>
+
+```python
+td = sp_tracks.drop(['key','mode','explicit'], axis=1).corr(method = 'pearson')
+plt.figure(figsize=(9,5))
+hmap = sns.heatmap(td, annot = True, fmt = '.1g', vmin=-1, vmax=1, center=0, cmap='Greens', linewidths=0.1, linecolor='black')
+hmap.set_title('Correlation HeatMap')
+hmap.set_xticklabels(hmap.get_xticklabels(), rotation=90)
+```
   <li>Creating a 4% Sample of the Entire Dataset</li>
+
+```python
+sample_sp=sp_tracks.sample(int(0.004*len(sp_tracks)))
+print(len(sample_sp))
+```
   <li>Regression Plot of Loudness vs. Energy with Regression Line</li>
+
+```python
+plt.figure(figsize=(8,4))
+sns.regplot(data=sample_sp, y='loudness', x='energy', color='#054907').set(title='Regression Plot - Loudness vs Energy Correlation')
+```
   <li>Regression Plot of Popularity vs. Acousticness with Regression Line</li>
+
+```python
+plt.figure(figsize=(8,4))
+sns.regplot(data=sample_sp, y='popularity', x='acousticness', color='#008000').set(title='Regression Plot - Popularity vs Acousticness Correlation')
+```
   <li>Adding a New Column to the Tracks Table</li>
+
+```
+sp_tracks['dates']=sp_tracks.index.get_level_values('release_date')
+sp_tracks.dates=pd.to_datetime(sp_tracks.dates)
+years=sp_tracks.dates.dt.year
+sp_tracks.head()
+```
   <li>Graph: Number of Songs per Year</li>
+
+```python
+sns.displot(years, discrete=True, aspect=2, height=4, kind='hist',color='g').set(title='No of songs - per year')
+```
   <li>Line Graph: Duration of Songs Over Each Year</li>
+
+```python
+total_dr = sp_tracks.duration
+fig_dims = (15,5)
+fig, ax = plt.subplots(figsize=fig_dims)
+fig = sns.barplot(x = years, y = total_dr, ax = ax, errwidth = False).set(title='Years vs Duration')
+plt.xticks(rotation=90)
+```
   <li>Horizontal Bar Plot: Song Duration Across Different Genres</li>
+
+```python
+plt.title('Duration of songs in different Genres')
+sns.color_palette('crest', as_cmap=True)
+sns.barplot(y='genre', x='duration_ms', data=sp_feature)
+plt.xlabel('Duration in ms')
+plt.ylabel('Genres')
+```
   <li>Bar Plot: Top Five Genres by Popularity</li>
+
+```python
+sns.set_style(style='darkgrid')
+plt.figure(figsize=(8,4))
+Top = sp_feature.sort_values('popularity', ascending=False)[:10]
+sns.barplot(y = 'genre', x = 'popularity', data = Top).set(title='Genres by Popularity-Top 5')
+```
   </ol>
