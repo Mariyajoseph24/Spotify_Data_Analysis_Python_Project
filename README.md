@@ -44,6 +44,19 @@ import seaborn as sns
 ```
 
   <h1><a name="exploringthedataset">Exploring the Dataset</a></h1>
+
+```python
+sp_tracks = pd.read_csv('D:/spotifydata/tracks.csv')
+sp_feature = pd.read_csv('D:/spotifydata/SpotifyFeatures.csv')
+```
+```python
+#viewing the tracks data
+sp_tracks.head()
+```
+```python
+#viewing the feature data
+sp_feature.head()
+```
   <h1><a name="identifyingnullvaluesinthedataset">Identifying Null Values in the Dataset</a></h1>
   <h1><a name="datasetoverviewrowscolumnsdatatypesandmemoryusage">Dataset Overview: Rows, Columns, Data Types, and Memory Usage</a></h1>
   <h1><a name="extractinginsightsfromthedatasetthroughanalysis">Extracting Insights from the Dataset through Analysis</a></h1>
