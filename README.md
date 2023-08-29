@@ -86,7 +86,7 @@ sp_feature.info()
   <li>Extracting Artist Name from the 18th Row of the Dataset</li>
   <li>Converting Song Duration from Milliseconds to Seconds</li>
   <li>Visualization: Pearson Correlation Heatmap for Two Variables</li>
-  <li>**Creating a 4% Sample of the Entire Dataset**</li>
+  <li>Creating a 4% Sample of the Entire Dataset</li>
   <li>Regression Plot of Loudness vs. Energy with Regression Line</li>
   <li>Regression Plot of Popularity vs. Acousticness with Regression Line</li>
   <li>Adding a New Column to the Tracks Table</li>
