@@ -3,9 +3,9 @@
 <h1>Contents</h1>
 <ul>
   <li><a href="#introduction">Introduction</a></li>
-  <li><a href="#problemstatement">Problem Statement</a></li>
-  <li><a href="#entityrelationshipdiagram">Entity Relationship Diagram</a></li>
-  <li><a href="#casestudyquestionsandsolutions">Case Study Questions & Solutions</a></li>
-  <li><a href="#bonusquestionsandsolutions">Bonus Questions & Solutions</a></li>
-  <li><a href="#keyinsights">Key Insights</a></li>
+  <li><a href="#importrequiredlibraries">Import Required Libraries</a></li>
+  <li><a href="#exploringthedataset">Exploring the Dataset</a></li>
+  <li><a href="#identifyingnullvaluesinthedataset">Identifying Null Values in the Dataset</a></li>
+  <li><a href="#datasetoverview:rows,columns,datatypes,andmemoryusage">Dataset Overview: Rows, Columns, Data Types, and Memory Usage</a></li>
+  <li><a href="#extractinginsightsfromthedatasetthroughanalysis">Extracting Insights from the Dataset through Analysis</a></li>
 </ul>
