@@ -25,10 +25,10 @@ Through the Spotify Data Analysis Project I not sharpened my skills but also gai
   
   Don't forget to follow and star ⭐ the repository if you find it valuable.</p>
 
-Tools Used🛠️:
-Programming Language: Python
-Libraries: Pandas, Numpy, Matplotlib, Seaborn
-IDE: Jupyter Notebook
+Tools Used🛠️:<br>
+Programming Language: Python<br>
+Libraries: Pandas, Numpy, Matplotlib, Seaborn<br>
+IDE: Jupyter Notebook<br>
 
 Dataset: <a href="https://www.kaggle.com/datasets/lehaknarnauli/spotify-datasets?select=artists.csv">
          <img src=" Spotify Dataset" alt=""> Spotify Dataset</a><br>
