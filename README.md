@@ -58,5 +58,40 @@ sp_tracks.head()
 sp_feature.head()
 ```
   <h1><a name="identifyingnullvaluesinthedataset">Identifying Null Values in the Dataset</a></h1>
+
+```python
+#checking null in tracks data
+pd.isnull(sp_tracks).sum()
+```
+```python
+#checking null in tracks data
+pd.isnull(sp_feature).sum()
+```
   <h1><a name="datasetoverviewrowscolumnsdatatypesandmemoryusage">Dataset Overview: Rows, Columns, Data Types, and Memory Usage</a></h1>
+
+```python
+#checking info in tracks data
+sp_tracks.info()
+```
+```python
+#checking info in feature data
+sp_feature.info()
+```
   <h1><a name="extractinginsightsfromthedatasetthroughanalysis">Extracting Insights from the Dataset through Analysis</a></h1>
+  <ol>
+  <li>Exploring the 10 Least Popular Songs in the Spotify Dataset</li>
+  <li>Descriptive Statistics </li>
+  <li>Discovering the Top 10 Popular Songs in the Spotify Dataset</li>
+  <li>Setting Release Date as the Index Column</li>
+  <li>Extracting Artist Name from the 18th Row of the Dataset</li>
+  <li>Converting Song Duration from Milliseconds to Seconds</li>
+  <li>Visualization: Pearson Correlation Heatmap for Two Variables</li>
+  <li>**Creating a 4% Sample of the Entire Dataset**</li>
+  <li>Regression Plot of Loudness vs. Energy with Regression Line</li>
+  <li>Regression Plot of Popularity vs. Acousticness with Regression Line</li>
+  <li>Adding a New Column to the Tracks Table</li>
+  <li>Graph: Number of Songs per Year</li>
+  <li>Line Graph: Duration of Songs Over Each Year</li>
+  <li>Horizontal Bar Plot: Song Duration Across Different Genres</li>
+  <li>Bar Plot: Top Five Genres by Popularity</li>
+  </ol>
