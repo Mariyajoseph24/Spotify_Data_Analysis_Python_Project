@@ -11,7 +11,7 @@
 </ul>
 
 <h1><a name="introduction">Introduction</a></h1>
-<p>The Spotify Data Analysis Project. In todays changing world data analysis has become crucial in fields such, as business, research and meteorology. This project showcases the role that data plays in making decisions advancing research initiatives and even predicting weather patterns.
+<p>The Spotify Data Analysis Project: In todays changing world data analysis has become crucial in fields such, as business, research and meteorology. This project showcases the role that data plays in making decisions advancing research initiatives and even predicting weather patterns.
 
   The immense potential of data analysis is evident in this project, which focuses on extracting insights from music related datasets using Python. At its core Spotify takes stage as an audio streaming giant with captivating features like seamless song sharing and synchronized lyrics display.
 
@@ -34,8 +34,14 @@ Dataset: <a href="https://www.kaggle.com/datasets/lehaknarnauli/spotify-datasets
          <img src=" Spotify Dataset" alt=""> Spotify Dataset</a><br>
 </p>
 
-<h1><a name="importrequiredlibraries">Import Required Libraries</a></h1>
-<h1><a name="exploringthedataset">Exploring the Dataset</a></h1>
-<h1><a name="identifyingnullvaluesinthedataset">Identifying Null Values in the Dataset</a></h1>
-<h1><a name="datasetoverviewrowscolumnsdatatypesandmemoryusage">Dataset Overview: Rows, Columns, Data Types, and Memory Usage</a></h1>
-<h1><a name="extractinginsightsfromthedatasetthroughanalysis">Extracting Insights from the Dataset through Analysis</a></h1>
+  <h1><a name="importrequiredlibraries">Import Required Libraries</a></h1>
+```python
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+```
+  <h1><a name="exploringthedataset">Exploring the Dataset</a></h1>
+  <h1><a name="identifyingnullvaluesinthedataset">Identifying Null Values in the Dataset</a></h1>
+  <h1><a name="datasetoverviewrowscolumnsdatatypesandmemoryusage">Dataset Overview: Rows, Columns, Data Types, and Memory Usage</a></h1>
+  <h1><a name="extractinginsightsfromthedatasetthroughanalysis">Extracting Insights from the Dataset through Analysis</a></h1>
