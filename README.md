@@ -245,7 +245,7 @@ hmap.set_title('Correlation HeatMap')
 hmap.set_xticklabels(hmap.get_xticklabels(), rotation=90)
 ```
 <h6>Answer:</h6>
-<img width="200" alt="Coding" src="https://github.com/Mariyajoseph24/Spotify_Data_Analysis_Python_Project/assets/91487663/5105709b-dd48-40d5-827f-dc9d1e68bcc2">
+<img width="100" alt="Coding" src="https://github.com/Mariyajoseph24/Spotify_Data_Analysis_Python_Project/assets/91487663/5105709b-dd48-40d5-827f-dc9d1e68bcc2">
 
   <li>Creating a 4% Sample of the Entire Dataset</li>
 
@@ -254,7 +254,7 @@ sample_sp=sp_tracks.sample(int(0.004*len(sp_tracks)))
 print(len(sample_sp))
 ```
 <h6>Answer:</h6>
-<img width="200" alt="Coding" src="https://github.com/Mariyajoseph24/Spotify_Data_Analysis_Python_Project/assets/91487663/ba287e70-cbf5-474a-b8e6-765db4903f16">
+<img width="400" alt="Coding" src="https://github.com/Mariyajoseph24/Spotify_Data_Analysis_Python_Project/assets/91487663/ba287e70-cbf5-474a-b8e6-765db4903f16">
 
   <li>Regression Plot of Loudness vs. Energy with Regression Line</li>
 
@@ -263,7 +263,7 @@ plt.figure(figsize=(8,4))
 sns.regplot(data=sample_sp, y='loudness', x='energy', color='#054907').set(title='Regression Plot - Loudness vs Energy Correlation')
 ```
 <h6>Answer:</h6>
-<img width="200" alt="Coding" src="https://github.com/Mariyajoseph24/Spotify_Data_Analysis_Python_Project/assets/91487663/05f1fe1b-11d8-4ddf-bf9d-5b5fc36d1715">
+<img width="400" alt="Coding" src="https://github.com/Mariyajoseph24/Spotify_Data_Analysis_Python_Project/assets/91487663/05f1fe1b-11d8-4ddf-bf9d-5b5fc36d1715">
 
   <li>Regression Plot of Popularity vs. Acousticness with Regression Line</li>
 
@@ -272,7 +272,7 @@ plt.figure(figsize=(8,4))
 sns.regplot(data=sample_sp, y='popularity', x='acousticness', color='#008000').set(title='Regression Plot - Popularity vs Acousticness Correlation')
 ```
 <h6>Answer:</h6>
-<img width="200" alt="Coding" src="https://github.com/Mariyajoseph24/Spotify_Data_Analysis_Python_Project/assets/91487663/b611829a-cfb2-49d5-a115-129ab83ebc9f">
+<img width="400" alt="Coding" src="https://github.com/Mariyajoseph24/Spotify_Data_Analysis_Python_Project/assets/91487663/b611829a-cfb2-49d5-a115-129ab83ebc9f">
 
   <li>Adding a New Column to the Tracks Table</li>
 
@@ -283,7 +283,7 @@ years=sp_tracks.dates.dt.year
 sp_tracks.head()
 ```
 <h6>Answer:</h6>
-<img width="200" alt="Coding" src="https://github.com/Mariyajoseph24/Spotify_Data_Analysis_Python_Project/assets/91487663/0d89abb2-fba5-4bfa-b37d-e1e6d5d7063c">
+<img width="400" alt="Coding" src="https://github.com/Mariyajoseph24/Spotify_Data_Analysis_Python_Project/assets/91487663/0d89abb2-fba5-4bfa-b37d-e1e6d5d7063c">
 
   <li>Graph: Number of Songs per Year</li>
 
@@ -291,7 +291,7 @@ sp_tracks.head()
 sns.displot(years, discrete=True, aspect=2, height=4, kind='hist',color='g').set(title='No of songs - per year')
 ```
 <h6>Answer:</h6>
-<img width="200" alt="Coding" src="https://github.com/Mariyajoseph24/Spotify_Data_Analysis_Python_Project/assets/91487663/6581495b-3540-4ad5-911e-9d2146ac2010">
+<img width="400" alt="Coding" src="https://github.com/Mariyajoseph24/Spotify_Data_Analysis_Python_Project/assets/91487663/6581495b-3540-4ad5-911e-9d2146ac2010">
 
   <li>Line Graph: Duration of Songs Over Each Year</li>
 
@@ -303,7 +303,7 @@ fig = sns.barplot(x = years, y = total_dr, ax = ax, errwidth = False).set(title=
 plt.xticks(rotation=90)
 ```
 <h6>Answer:</h6>
-<img width="200" alt="Coding" src="https://github.com/Mariyajoseph24/Spotify_Data_Analysis_Python_Project/assets/91487663/34f4e389-b441-425a-8456-ab98d5bd96ec">
+<img width="400" alt="Coding" src="https://github.com/Mariyajoseph24/Spotify_Data_Analysis_Python_Project/assets/91487663/34f4e389-b441-425a-8456-ab98d5bd96ec">
 
   <li>Horizontal Bar Plot: Song Duration Across Different Genres</li>
 
@@ -315,7 +315,7 @@ plt.xlabel('Duration in ms')
 plt.ylabel('Genres')
 ```
 <h6>Answer:</h6>
-<img width="200" alt="Coding" src="https://github.com/Mariyajoseph24/Spotify_Data_Analysis_Python_Project/assets/91487663/944cdf33-f60e-48da-bcb3-4776d8bc8125">
+<img width="400" alt="Coding" src="https://github.com/Mariyajoseph24/Spotify_Data_Analysis_Python_Project/assets/91487663/944cdf33-f60e-48da-bcb3-4776d8bc8125">
 
   <li>Bar Plot: Top Five Genres by Popularity</li>
 
@@ -326,6 +326,6 @@ Top = sp_feature.sort_values('popularity', ascending=False)[:10]
 sns.barplot(y = 'genre', x = 'popularity', data = Top).set(title='Genres by Popularity-Top 5')
 ```
 <h6>Answer:</h6>
-<img width="200" alt="Coding" src="https://github.com/Mariyajoseph24/Spotify_Data_Analysis_Python_Project/assets/91487663/09b75262-dc3e-4314-b21e-08db24de6e1e">
+<img width="400" alt="Coding" src="https://github.com/Mariyajoseph24/Spotify_Data_Analysis_Python_Project/assets/91487663/09b75262-dc3e-4314-b21e-08db24de6e1e">
 
   </ol>
