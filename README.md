@@ -245,7 +245,7 @@ hmap.set_title('Correlation HeatMap')
 hmap.set_xticklabels(hmap.get_xticklabels(), rotation=90)
 ```
 <h6>Answer:</h6>
-<img width="100" alt="Coding" src="https://github.com/Mariyajoseph24/Spotify_Data_Analysis_Python_Project/assets/91487663/5105709b-dd48-40d5-827f-dc9d1e68bcc2">
+<img width="400" alt="Coding" src="https://github.com/Mariyajoseph24/Spotify_Data_Analysis_Python_Project/assets/91487663/5105709b-dd48-40d5-827f-dc9d1e68bcc2">
 
   <li>Creating a 4% Sample of the Entire Dataset</li>
 
@@ -254,7 +254,7 @@ sample_sp=sp_tracks.sample(int(0.004*len(sp_tracks)))
 print(len(sample_sp))
 ```
 <h6>Answer:</h6>
-<img width="400" alt="Coding" src="https://github.com/Mariyajoseph24/Spotify_Data_Analysis_Python_Project/assets/91487663/ba287e70-cbf5-474a-b8e6-765db4903f16">
+<img width="100" alt="Coding" src="https://github.com/Mariyajoseph24/Spotify_Data_Analysis_Python_Project/assets/91487663/ba287e70-cbf5-474a-b8e6-765db4903f16">
 
   <li>Regression Plot of Loudness vs. Energy with Regression Line</li>
 
