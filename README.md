@@ -147,16 +147,25 @@ sp_feature.info()
 a=sp_tracks.sort_values('popularity',ascending=True)[0:10]
 a[['name','popularity']]
 ```
+<h6>Answer:</h6>
+<img width="300" alt="Coding" src="https://github.com/Mariyajoseph24/Spotify_Data_Analysis_Python_Project/assets/91487663/fbc7e495-5d30-4bca-9f80-ab8036cb76d9">
+
   <li>Descriptive Statistics </li>
 
 ```python
 #descriptive statistics of tracks
 sp_tracks.describe().transpose()
 ```
+<h6>Answer:</h6>
+<img width="300" alt="Coding" src="https://github.com/Mariyajoseph24/Spotify_Data_Analysis_Python_Project/assets/91487663/6a0cbdba-0dfd-4507-9fc5-d6695a6b75b3">
+
 ```python
 #descriptive of feature
 sp_feature.describe().transpose()
 ```
+<h6>Answer:</h6>
+<img width="300" alt="Coding" src="https://github.com/Mariyajoseph24/Spotify_Data_Analysis_Python_Project/assets/91487663/4e64d105-0b80-4d2b-a1a0-3f3991c5056e">
+
   <li>Discovering the Top 10 Popular Songs in the Spotify Dataset</li>
 
 ```python
@@ -164,6 +173,9 @@ a=sp_tracks
 b=a[a['popularity']>90].sort_values('popularity',ascending=False)[:10]
 b[['name','popularity','artists']]
 ```
+<h6>Answer:</h6>
+<img width="300" alt="Coding" src="https://github.com/Mariyajoseph24/Spotify_Data_Analysis_Python_Project/assets/91487663/c4e88855-675e-409a-a61a-a2b4c987690b">
+
   <li>Setting Release Date as the Index Column</li>
 
 ```python
@@ -171,11 +183,18 @@ sp_tracks.set_index('release_date',inplace=True)
 sp_tracks.index=pd.to_datetime(sp_tracks.index)
 sp_tracks.head()
 ```
+<h6>Answer:</h6>
+<img width="300" alt="Coding" src="https://github.com/Mariyajoseph24/Spotify_Data_Analysis_Python_Project/assets/91487663/9c463e8a-58f3-45f9-9a51-1996eba4bb16">
+
   <li>Extracting Artist Name from the 18th Row of the Dataset</li>
 
 ```python
 sp_tracks[['artists']].iloc[18]
 ```
+<h6>Answer:</h6>
+<img width="300" alt="Coding" src="https://github.com/Mariyajoseph24/Spotify_Data_Analysis_Python_Project/assets/91487663/ee0d8e5c-1657-40b9-b80c-258c67f4da87">
+-------------------------------------------------------------------
+
   <li>Converting Song Duration from Milliseconds to Seconds</li>
 
 ```python
