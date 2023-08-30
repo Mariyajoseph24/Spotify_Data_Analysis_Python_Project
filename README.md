@@ -283,7 +283,7 @@ years=sp_tracks.dates.dt.year
 sp_tracks.head()
 ```
 <h6>Answer:</h6>
-<img width="400" alt="Coding" src="https://github.com/Mariyajoseph24/Spotify_Data_Analysis_Python_Project/assets/91487663/0d89abb2-fba5-4bfa-b37d-e1e6d5d7063c">
+<img width="450" alt="Coding" src="https://github.com/Mariyajoseph24/Spotify_Data_Analysis_Python_Project/assets/91487663/0d89abb2-fba5-4bfa-b37d-e1e6d5d7063c">
 
   <li>Graph: Number of Songs per Year</li>
 
@@ -303,7 +303,7 @@ fig = sns.barplot(x = years, y = total_dr, ax = ax, errwidth = False).set(title=
 plt.xticks(rotation=90)
 ```
 <h6>Answer:</h6>
-<img width="400" alt="Coding" src="https://github.com/Mariyajoseph24/Spotify_Data_Analysis_Python_Project/assets/91487663/34f4e389-b441-425a-8456-ab98d5bd96ec">
+<img width="450" alt="Coding" src="https://github.com/Mariyajoseph24/Spotify_Data_Analysis_Python_Project/assets/91487663/34f4e389-b441-425a-8456-ab98d5bd96ec">
 
   <li>Horizontal Bar Plot: Song Duration Across Different Genres</li>
 
