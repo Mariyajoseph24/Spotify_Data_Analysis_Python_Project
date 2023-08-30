@@ -149,6 +149,10 @@ a[['name','popularity']]
 ```
 <h6>Answer:</h6>
 <img width="300" alt="Coding" src="https://github.com/Mariyajoseph24/Spotify_Data_Analysis_Python_Project/assets/91487663/fbc7e495-5d30-4bca-9f80-ab8036cb76d9">
+<ul>
+  <li><code>a = sp_tracks.sort_values('popularity', ascending=True)[0:10]</code>: This line of code creates a new DataFrame <code>a</code> by sorting the 'sp_tracks' DataFrame based on the 'popularity' column in ascending order. The <code>[0:10]</code> notation selects the first 10 rows of the sorted DataFrame, effectively selecting the 10 least popular tracks.</li>
+  <li><code>a[['name', 'popularity']]</code>: This line of code selects specific columns, namely 'name' and 'popularity', from the DataFrame <code>a</code> created in the previous line. This will show the names of the 10 least popular tracks along with their corresponding popularity values.</li>
+</ul>
 
   <li>Descriptive Statistics </li>
 
@@ -158,6 +162,11 @@ sp_tracks.describe().transpose()
 ```
 <h6>Answer:</h6>
 <img width="450" alt="Coding" src="https://github.com/Mariyajoseph24/Spotify_Data_Analysis_Python_Project/assets/91487663/6a0cbdba-0dfd-4507-9fc5-d6695a6b75b3">
+<ul>
+  <li><code>#descriptive statistics of tracks</code>: This comment indicates that the following line of code is intended to compute and display descriptive statistics of the 'sp_tracks' DataFrame.</li>
+  <li><code>sp_tracks.describe().transpose()</code>: This line of code calls the <code>describe()</code> method on the 'sp_tracks' DataFrame, which calculates various summary statistics for each numeric column in the DataFrame. The <code>.transpose()</code> method is then used to transpose the resulting statistics table, making it easier to read with columns as rows and vice versa.</li>
+</ul>
+
 
 ```python
 #descriptive of feature
@@ -165,6 +174,11 @@ sp_feature.describe().transpose()
 ```
 <h6>Answer:</h6>
 <img width="450" alt="Coding" src="https://github.com/Mariyajoseph24/Spotify_Data_Analysis_Python_Project/assets/91487663/4e64d105-0b80-4d2b-a1a0-3f3991c5056e">
+<ul>
+  <li><code>#descriptive statistics of feature</code>: This comment indicates that the following line of code is intended to compute and display descriptive statistics of the 'sp_feature' DataFrame.</li>
+  <li><code>sp_feature.describe().transpose()</code>: This line of code calls the <code>describe()</code> method on the 'sp_feature' DataFrame, which calculates various summary statistics for each numeric column in the DataFrame. The <code>.transpose()</code> method is then used to transpose the resulting statistics table, making it easier to read with columns as rows and vice versa.</li>
+</ul>
+
 
   <li>Discovering the Top 10 Popular Songs in the Spotify Dataset</li>
 
@@ -175,6 +189,12 @@ b[['name','popularity','artists']]
 ```
 <h6>Answer:</h6>
 <img width="450" alt="Coding" src="https://github.com/Mariyajoseph24/Spotify_Data_Analysis_Python_Project/assets/91487663/c4e88855-675e-409a-a61a-a2b4c987690b">
+<ul>
+  <li><code>a = sp_tracks</code>: This line of code assigns the 'sp_tracks' DataFrame to a new DataFrame variable <code>a</code>.</li>
+  <li><code>b = a[a['popularity'] > 90].sort_values('popularity', ascending=False)[:10]</code>: This line of code creates a new DataFrame <code>b</code> by selecting rows from the DataFrame <code>a</code> where the 'popularity' column is greater than 90. The DataFrame is then sorted in descending order based on the 'popularity' column, and the first 10 rows are selected. This effectively gives you the top 10 most popular tracks.</li>
+  <li><code>b[['name', 'popularity', 'artists']]</code>: This line of code selects specific columns ('name', 'popularity', and 'artists') from the DataFrame <code>b</code> created in the previous line. This will display the names, popularity values, and artist information of the top 10 most popular tracks.</li>
+</ul>
+
 
   <li>Setting Release Date as the Index Column</li>
 
@@ -185,6 +205,12 @@ sp_tracks.head()
 ```
 <h6>Answer:</h6>
 <img width="450" alt="Coding" src="https://github.com/Mariyajoseph24/Spotify_Data_Analysis_Python_Project/assets/91487663/9c463e8a-58f3-45f9-9a51-1996eba4bb16">
+<ul>
+  <li><code>sp_tracks.set_index('release_date', inplace=True)</code>: This line of code sets the 'release_date' column as the index of the 'sp_tracks' DataFrame. The <code>inplace=True</code> argument modifies the DataFrame in place, meaning the change is applied directly to the original DataFrame.</li>
+  <li><code>sp_tracks.index = pd.to_datetime(sp_tracks.index)</code>: This line of code converts the index of the 'sp_tracks' DataFrame to a datetime format using the <code>pd.to_datetime()</code> function. This is often done to ensure that the index represents dates in a meaningful way, allowing for time-based operations.</li>
+  <li><code>sp_tracks.head()</code>: This line of code calls the <code>head()</code> method on the 'sp_tracks' DataFrame, which will display the first few rows of the DataFrame with the updated index.</li>
+</ul>
+
 
   <li>Extracting Artist Name from the 18th Row of the Dataset</li>
 
@@ -193,6 +219,10 @@ sp_tracks[['artists']].iloc[18]
 ```
 <h6>Answer:</h6>
 <img width="300" alt="Coding" src="https://github.com/Mariyajoseph24/Spotify_Data_Analysis_Python_Project/assets/91487663/ee0d8e5c-1657-40b9-b80c-258c67f4da87">
+<ul>
+  <li><code>sp_tracks[['artists']].iloc[18]</code>: This line of code selects the 'artists' column from the 'sp_tracks' DataFrame and then uses the <code>iloc[18]</code> indexer to retrieve the value at the 18th row of the 'artists' column. This will display the artists' information for the track at index 18.</li>
+</ul>
+
 -------------------------------------------------------------------
 
   <li>Converting Song Duration from Milliseconds to Seconds</li>
