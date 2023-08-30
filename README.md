@@ -157,14 +157,14 @@ a[['name','popularity']]
 sp_tracks.describe().transpose()
 ```
 <h6>Answer:</h6>
-<img width="300" alt="Coding" src="https://github.com/Mariyajoseph24/Spotify_Data_Analysis_Python_Project/assets/91487663/6a0cbdba-0dfd-4507-9fc5-d6695a6b75b3">
+<img width="450" alt="Coding" src="https://github.com/Mariyajoseph24/Spotify_Data_Analysis_Python_Project/assets/91487663/6a0cbdba-0dfd-4507-9fc5-d6695a6b75b3">
 
 ```python
 #descriptive of feature
 sp_feature.describe().transpose()
 ```
 <h6>Answer:</h6>
-<img width="300" alt="Coding" src="https://github.com/Mariyajoseph24/Spotify_Data_Analysis_Python_Project/assets/91487663/4e64d105-0b80-4d2b-a1a0-3f3991c5056e">
+<img width="450" alt="Coding" src="https://github.com/Mariyajoseph24/Spotify_Data_Analysis_Python_Project/assets/91487663/4e64d105-0b80-4d2b-a1a0-3f3991c5056e">
 
   <li>Discovering the Top 10 Popular Songs in the Spotify Dataset</li>
 
@@ -174,7 +174,7 @@ b=a[a['popularity']>90].sort_values('popularity',ascending=False)[:10]
 b[['name','popularity','artists']]
 ```
 <h6>Answer:</h6>
-<img width="300" alt="Coding" src="https://github.com/Mariyajoseph24/Spotify_Data_Analysis_Python_Project/assets/91487663/c4e88855-675e-409a-a61a-a2b4c987690b">
+<img width="450" alt="Coding" src="https://github.com/Mariyajoseph24/Spotify_Data_Analysis_Python_Project/assets/91487663/c4e88855-675e-409a-a61a-a2b4c987690b">
 
   <li>Setting Release Date as the Index Column</li>
 
@@ -184,7 +184,7 @@ sp_tracks.index=pd.to_datetime(sp_tracks.index)
 sp_tracks.head()
 ```
 <h6>Answer:</h6>
-<img width="300" alt="Coding" src="https://github.com/Mariyajoseph24/Spotify_Data_Analysis_Python_Project/assets/91487663/9c463e8a-58f3-45f9-9a51-1996eba4bb16">
+<img width="450" alt="Coding" src="https://github.com/Mariyajoseph24/Spotify_Data_Analysis_Python_Project/assets/91487663/9c463e8a-58f3-45f9-9a51-1996eba4bb16">
 
   <li>Extracting Artist Name from the 18th Row of the Dataset</li>
 
