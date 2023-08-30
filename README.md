@@ -53,30 +53,53 @@ sp_feature = pd.read_csv('D:/spotifydata/SpotifyFeatures.csv')
 #viewing the tracks data
 sp_tracks.head()
 ```
+<h6>Answer:</h6>
+<img width="200" alt="Coding" src="https://github.com/Mariyajoseph24/Spotify_Data_Analysis_Python_Project/assets/91487663/b778a861-fbf5-49ec-87f8-54f6db2c5721">
+
 ```python
 #viewing the feature data
 sp_feature.head()
 ```
+
+<h6>Answer:</h6>
+<img width="200" alt="Coding" src="https://github.com/Mariyajoseph24/Spotify_Data_Analysis_Python_Project/assets/91487663/11c99ded-b241-485d-a618-ba8b17c7ed75">
+
   <h1><a name="identifyingnullvaluesinthedataset">Identifying Null Values in the Dataset</a></h1>
 
 ```python
 #checking null in tracks data
 pd.isnull(sp_tracks).sum()
 ```
+
+<h6>Answer:</h6>
+<img width="200" alt="Coding" src="https://github.com/Mariyajoseph24/Spotify_Data_Analysis_Python_Project/assets/91487663/891dc6d1-7ad4-42b4-be19-d04c5db990ea">
+
 ```python
 #checking null in tracks data
 pd.isnull(sp_feature).sum()
 ```
+
+<h6>Answer:</h6>
+<img width="200" alt="Coding" src="https://github.com/Mariyajoseph24/Spotify_Data_Analysis_Python_Project/assets/91487663/11bf6cd1-ec0f-43c0-9ce8-fb9b721b930e">
+
   <h1><a name="datasetoverviewrowscolumnsdatatypesandmemoryusage">Dataset Overview: Rows, Columns, Data Types, and Memory Usage</a></h1>
 
 ```python
 #checking info in tracks data
 sp_tracks.info()
 ```
+
+<h6>Answer:</h6>
+<img width="200" alt="Coding" src="https://github.com/Mariyajoseph24/Spotify_Data_Analysis_Python_Project/assets/91487663/d8436fee-1e13-4c39-9ddf-abfba1cc8b34">
+
 ```python
 #checking info in feature data
 sp_feature.info()
 ```
+<h6>Answer:</h6>
+<img width="200" alt="Coding" src="https://github.com/Mariyajoseph24/Spotify_Data_Analysis_Python_Project/assets/91487663/f5321efd-cceb-45e4-a7ac-ad3b201638cd">
+
+----------------------------------------------------------------------------
   <h1><a name="extractinginsightsfromthedatasetthroughanalysis">Extracting Insights from the Dataset through Analysis</a></h1>
   <ol>
   <li>Exploring the 10 Least Popular Songs in the Spotify Dataset</li>
