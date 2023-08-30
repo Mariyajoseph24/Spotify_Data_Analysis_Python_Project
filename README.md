@@ -42,6 +42,13 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 ```
+<ul>
+  <li><code>import numpy as np</code>: This imports the NumPy library and aliases it as 'np'. NumPy is used for numerical computations and provides support for arrays and matrices.</li>
+  <li><code>import pandas as pd</code>: This imports the Pandas library and aliases it as 'pd'. Pandas is used for data manipulation and analysis, providing data structures like DataFrames for tabular data.</li>
+  <li><code>import matplotlib.pyplot as plt</code>: This imports the Pyplot module from the Matplotlib library and aliases it as 'plt'. Matplotlib is a popular plotting library in Python, and Pyplot provides a convenient interface to create visualizations.</li>
+  <li><code>import seaborn as sns</code>: This imports the Seaborn library and aliases it as 'sns'. Seaborn is built on top of Matplotlib and offers a higher-level interface for creating attractive statistical visualizations.</li>
+</ul>
+
 
   <h1><a name="exploringthedataset">Exploring the Dataset</a></h1>
 
@@ -49,6 +56,11 @@ import seaborn as sns
 sp_tracks = pd.read_csv('D:/spotifydata/tracks.csv')
 sp_feature = pd.read_csv('D:/spotifydata/SpotifyFeatures.csv')
 ```
+<ul>
+  <li><code>sp_tracks = pd.read_csv('D:/spotifydata/tracks.csv')</code>: This line reads a CSV file named 'tracks.csv' located at the 'D:/spotifydata/' directory and loads its data into a Pandas DataFrame called <code>sp_tracks</code>. This DataFrame is likely to contain information about tracks.</li>
+  <li><code>sp_feature = pd.read_csv('D:/spotifydata/SpotifyFeatures.csv')</code>: This line reads another CSV file named 'SpotifyFeatures.csv' from the same directory and loads its data into a separate Pandas DataFrame called <code>sp_feature</code>. This DataFrame probably contains additional features or attributes related to the Spotify tracks.</li>
+</ul>
+
 ```python
 #viewing the tracks data
 sp_tracks.head()
@@ -56,6 +68,10 @@ sp_tracks.head()
 <p>NOTE:The image provided is not the entirety of the complete image, as there are restrictions in capturing full images through screenshots. To access the comprehensive table, please refer to the Jupyter notebook folder within this repository.</p>
 <h6>Answer:</h6>
 <img width="500" alt="Coding" src="https://github.com/Mariyajoseph24/Spotify_Data_Analysis_Python_Project/assets/91487663/b778a861-fbf5-49ec-87f8-54f6db2c5721">
+<ul>
+  <li><code>#viewing the tracks data</code>: This is a comment that indicates the following line of code is meant to display or view the data in the 'sp_tracks' DataFrame.</li>
+  <li><code>sp_tracks.head()</code>: This line of code calls the <code>head()</code> method on the 'sp_tracks' DataFrame. The <code>head()</code> method is used to display the first few rows of the DataFrame. This is useful for quickly getting an overview of the data.</li>
+</ul>
 
 ```python
 #viewing the feature data
@@ -64,6 +80,11 @@ sp_feature.head()
 <p>NOTE:The image provided is not the entirety of the complete image, as there are restrictions in capturing full images through screenshots. To access the comprehensive table, please refer to the Jupyter notebook folder within this repository.</p>
 <h6>Answer:</h6>
 <img width="500" alt="Coding" src="https://github.com/Mariyajoseph24/Spotify_Data_Analysis_Python_Project/assets/91487663/11c99ded-b241-485d-a618-ba8b17c7ed75">
+<ul>
+  <li><code>#viewing the feature data</code>: This is a comment that indicates the following line of code is intended to display or view the data in the 'sp_feature' DataFrame.</li>
+  <li><code>sp_feature.head()</code>: This line of code calls the <code>head()</code> method on the 'sp_feature' DataFrame. The <code>head()</code> method is used to display the first few rows of the DataFrame. This allows you to quickly inspect the initial records and get a sense of the data.</li>
+</ul>
+
 
   <h1><a name="identifyingnullvaluesinthedataset">Identifying Null Values in the Dataset</a></h1>
 
@@ -74,14 +95,22 @@ pd.isnull(sp_tracks).sum()
 
 <h6>Answer:</h6>
 <img width="200" alt="Coding" src="https://github.com/Mariyajoseph24/Spotify_Data_Analysis_Python_Project/assets/91487663/891dc6d1-7ad4-42b4-be19-d04c5db990ea">
+<ul>
+  <li><code>#checking null in tracks data</code>: This comment indicates that the following line of code is used to identify and count the missing (null) values in the 'sp_tracks' DataFrame.</li>
+  <li><code>pd.isnull(sp_tracks).sum()</code>: This line of code uses the <code>pd.isnull()</code> function on the 'sp_tracks' DataFrame to create a boolean DataFrame where each cell contains <code>True</code> if the corresponding cell in the original DataFrame is null and <code>False</code> otherwise. The <code>.sum()</code> function is then used to count the number of <code>True</code> values in each column, effectively giving you the count of missing values in each column.</li>
+</ul>
 
 ```python
-#checking null in tracks data
+#checking null in feature data
 pd.isnull(sp_feature).sum()
 ```
 
 <h6>Answer:</h6>
 <img width="200" alt="Coding" src="https://github.com/Mariyajoseph24/Spotify_Data_Analysis_Python_Project/assets/91487663/11bf6cd1-ec0f-43c0-9ce8-fb9b721b930e">
+<ul>
+  <li><code>#checking null in feature data</code>: This comment indicates that the following line of code is intended to identify and count the missing (null) values in the 'sp_feature' DataFrame.</li>
+  <li><code>pd.isnull(sp_feature).sum()</code>: This line of code uses the <code>pd.isnull()</code> function on the 'sp_feature' DataFrame to create a boolean DataFrame where each cell contains <code>True</code> if the corresponding cell in the original DataFrame is null and <code>False</code> otherwise. The <code>.sum()</code> function is then used to count the number of <code>True</code> values in each column, effectively giving you the count of missing values in each column.</li>
+</ul>
 
   <h1><a name="datasetoverviewrowscolumnsdatatypesandmemoryusage">Dataset Overview: Rows, Columns, Data Types, and Memory Usage</a></h1>
 
@@ -92,6 +121,11 @@ sp_tracks.info()
 
 <h6>Answer:</h6>
 <img width="300" alt="Coding" src="https://github.com/Mariyajoseph24/Spotify_Data_Analysis_Python_Project/assets/91487663/d8436fee-1e13-4c39-9ddf-abfba1cc8b34">
+<ul>
+  <li><code>#checking info in tracks data</code>: This comment indicates that the following line of code is meant to display information about the 'sp_tracks' DataFrame.</li>
+  <li><code>sp_tracks.info()</code>: This line of code calls the <code>info()</code> method on the 'sp_tracks' DataFrame. The <code>info()</code> method provides a concise summary of the DataFrame, including the data types of each column, the number of non-null values, and memory usage. It's a useful way to get a quick overview of the data and its structure.</li>
+</ul>
+
 
 ```python
 #checking info in feature data
@@ -99,6 +133,10 @@ sp_feature.info()
 ```
 <h6>Answer:</h6>
 <img width="300" alt="Coding" src="https://github.com/Mariyajoseph24/Spotify_Data_Analysis_Python_Project/assets/91487663/f5321efd-cceb-45e4-a7ac-ad3b201638cd">
+<ul>
+  <li><code>#checking info in feature data</code>: This comment indicates that the following line of code is intended to display information about the 'sp_feature' DataFrame.</li>
+  <li><code>sp_feature.info()</code>: This line of code calls the <code>info()</code> method on the 'sp_feature' DataFrame. The <code>info()</code> method provides a concise summary of the DataFrame, including the data types of each column, the number of non-null values, and memory usage. This summary helps you understand the structure and content of the DataFrame.</li>
+</ul>
 
 ----------------------------------------------------------------------------
   <h1><a name="extractinginsightsfromthedatasetthroughanalysis">Extracting Insights from the Dataset through Analysis</a></h1>
