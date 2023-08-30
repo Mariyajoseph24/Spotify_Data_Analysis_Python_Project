@@ -223,7 +223,6 @@ sp_tracks[['artists']].iloc[18]
   <li><code>sp_tracks[['artists']].iloc[18]</code>: This line of code selects the 'artists' column from the 'sp_tracks' DataFrame and then uses the <code>iloc[18]</code> indexer to retrieve the value at the 18th row of the 'artists' column. This will display the artists' information for the track at index 18.</li>
 </ul>
 
--------------------------------------------------------------------
 
   <li>Converting Song Duration from Milliseconds to Seconds</li>
 
@@ -234,6 +233,12 @@ sp_tracks.duration.head()
 ```
 <h6>Answer:</h6>
 <img width="200" alt="Coding" src="https://github.com/Mariyajoseph24/Spotify_Data_Analysis_Python_Project/assets/91487663/12be7462-32ff-4b02-b048-630249000c96">
+<ul>
+  <li><code>sp_tracks['duration'] = sp_tracks['duration_ms'].apply(lambda x: round(x/1000))</code>: This line of code creates a new column called 'duration' in the 'sp_tracks' DataFrame. It calculates the duration in seconds by applying a lambda function to the 'duration_ms' column. The lambda function divides the 'duration_ms' value by 1000 and rounds it to get the duration in seconds.</li>
+  <li><code>sp_tracks.drop('duration_ms', inplace=True, axis=1)</code>: This line of code removes the original 'duration_ms' column from the 'sp_tracks' DataFrame. The <code>inplace=True</code> argument makes the change directly to the DataFrame.</li>
+  <li><code>sp_tracks.duration.head()</code>: This line of code displays the first few values from the newly created 'duration' column in the 'sp_tracks' DataFrame.</li>
+</ul>
+
 
   <li>Visualization: Pearson Correlation Heatmap for Two Variables</li>
 
@@ -246,6 +251,14 @@ hmap.set_xticklabels(hmap.get_xticklabels(), rotation=90)
 ```
 <h6>Answer:</h6>
 <img width="400" alt="Coding" src="https://github.com/Mariyajoseph24/Spotify_Data_Analysis_Python_Project/assets/91487663/5105709b-dd48-40d5-827f-dc9d1e68bcc2">
+<ul>
+  <li><code>td = sp_tracks.drop(['key', 'mode', 'explicit'], axis=1).corr(method='pearson')</code>: This line of code creates a correlation matrix by calculating Pearson correlation coefficients between numeric columns in the 'sp_tracks' DataFrame. It drops the columns 'key', 'mode', and 'explicit' before calculating the correlations.</li>
+  <li><code>plt.figure(figsize=(9, 5))</code>: This line of code sets the figure size for the upcoming heatmap visualization using Matplotlib.</li>
+  <li><code>hmap = sns.heatmap(td, annot=True, fmt='.1g', vmin=-1, vmax=1, center=0, cmap='Greens', linewidths=0.1, linecolor='black')</code>: This line of code uses Seaborn's <code>heatmap()</code> function to create a heatmap visualization of the correlation matrix. It displays the correlation values as annotations, uses a color map ('Greens') to represent the correlation strength, and sets the range of correlation values to be between -1 and 1.</li>
+  <li><code>hmap.set_title('Correlation HeatMap')</code>: This line of code sets the title for the heatmap visualization.</li>
+  <li><code>hmap.set_xticklabels(hmap.get_xticklabels(), rotation=90)</code>: This line of code rotates the x-axis labels of the heatmap for better readability.</li>
+</ul>
+
 
   <li>Creating a 4% Sample of the Entire Dataset</li>
 
@@ -255,6 +268,11 @@ print(len(sample_sp))
 ```
 <h6>Answer:</h6>
 <img width="100" alt="Coding" src="https://github.com/Mariyajoseph24/Spotify_Data_Analysis_Python_Project/assets/91487663/ba287e70-cbf5-474a-b8e6-765db4903f16">
+<ul>
+  <li><code>sample_sp = sp_tracks.sample(int(0.004 * len(sp_tracks)))</code>: This line of code creates a random sample of the 'sp_tracks' DataFrame. The <code>sample()</code> function is used to select a random subset of rows. The argument <code>int(0.004 * len(sp_tracks))</code> determines the number of rows to be sampled. In this case, it's approximately 0.4% of the total number of rows in the 'sp_tracks' DataFrame.</li>
+  <li><code>print(len(sample_sp))</code>: This line of code prints the length (number of rows) of the <code>sample_sp</code> DataFrame to the console. This will show you the number of rows in the sampled subset.</li>
+</ul>
+
 
   <li>Regression Plot of Loudness vs. Energy with Regression Line</li>
 
@@ -264,6 +282,12 @@ sns.regplot(data=sample_sp, y='loudness', x='energy', color='#054907').set(title
 ```
 <h6>Answer:</h6>
 <img width="400" alt="Coding" src="https://github.com/Mariyajoseph24/Spotify_Data_Analysis_Python_Project/assets/91487663/05f1fe1b-11d8-4ddf-bf9d-5b5fc36d1715">
+<ul>
+  <li><code>plt.figure(figsize=(8, 4))</code>: This line of code sets the figure size for the upcoming visualization using Matplotlib.</li>
+  <li><code>sns.regplot(data=sample_sp, y='loudness', x='energy', color='#054907')</code>: This line of code uses Seaborn's <code>regplot()</code> function to create a regression plot. It visualizes the relationship between the 'loudness' and 'energy' columns from the <code>sample_sp</code> DataFrame. The <code>color='#054907'</code> argument sets the color of the plot.</li>
+  <li><code>.set(title='Regression Plot - Loudness vs Energy Correlation')</code>: This line of code sets the title for the regression plot.</li>
+</ul>
+
 
   <li>Regression Plot of Popularity vs. Acousticness with Regression Line</li>
 
@@ -273,6 +297,12 @@ sns.regplot(data=sample_sp, y='popularity', x='acousticness', color='#008000').s
 ```
 <h6>Answer:</h6>
 <img width="400" alt="Coding" src="https://github.com/Mariyajoseph24/Spotify_Data_Analysis_Python_Project/assets/91487663/b611829a-cfb2-49d5-a115-129ab83ebc9f">
+<ul>
+  <li><code>plt.figure(figsize=(8, 4))</code>: This line of code sets the figure size for the upcoming visualization using Matplotlib.</li>
+  <li><code>sns.regplot(data=sample_sp, y='popularity', x='acousticness', color='#008000')</code>: This line of code uses Seaborn's <code>regplot()</code> function to create a regression plot. It visualizes the relationship between the 'popularity' and 'acousticness' columns from the <code>sample_sp</code> DataFrame. The <code>color='#008000'</code> argument sets the color of the plot.</li>
+  <li><code>.set(title='Regression Plot - Popularity vs Acousticness Correlation')</code>: This line of code sets the title for the regression plot.</li>
+</ul>
+
 
   <li>Adding a New Column to the Tracks Table</li>
 
@@ -284,6 +314,13 @@ sp_tracks.head()
 ```
 <h6>Answer:</h6>
 <img width="450" alt="Coding" src="https://github.com/Mariyajoseph24/Spotify_Data_Analysis_Python_Project/assets/91487663/0d89abb2-fba5-4bfa-b37d-e1e6d5d7063c">
+<ul>
+  <li><code>sp_tracks['dates'] = sp_tracks.index.get_level_values('release_date')</code>: This line of code creates a new column called 'dates' in the 'sp_tracks' DataFrame. It uses the <code>get_level_values()</code> method on the index of the DataFrame to extract the 'release_date' values and assigns them to the 'dates' column.</li>
+  <li><code>sp_tracks.dates = pd.to_datetime(sp_tracks.dates)</code>: This line of code converts the values in the 'dates' column to datetime format using the <code>pd.to_datetime()</code> function. This ensures that the dates are treated as proper datetime objects.</li>
+  <li><code>years = sp_tracks.dates.dt.year</code>: This line of code extracts the year component from the 'dates' column using the <code>dt.year</code> attribute of the datetime objects. It assigns the extracted years to the 'years' variable.</li>
+  <li><code>sp_tracks.head()</code>: This line of code displays the first few rows of the modified 'sp_tracks' DataFrame, which now includes the 'dates' column and the extracted 'years' variable.</li>
+</ul>
+
 
   <li>Graph: Number of Songs per Year</li>
 
@@ -292,6 +329,11 @@ sns.displot(years, discrete=True, aspect=2, height=4, kind='hist',color='g').set
 ```
 <h6>Answer:</h6>
 <img width="400" alt="Coding" src="https://github.com/Mariyajoseph24/Spotify_Data_Analysis_Python_Project/assets/91487663/6581495b-3540-4ad5-911e-9d2146ac2010">
+<ul>
+  <li><code>sns.displot(years, discrete=True, aspect=2, height=4, kind='hist', color='g')</code>: This line of code uses Seaborn's <code>displot()</code> function to create a histogram plot. It visualizes the distribution of the 'years' variable, which contains the release years of the songs. The <code>discrete=True</code> argument indicates that the data is discrete (years), <code>aspect=2</code> adjusts the width-to-height ratio of the plot, <code>height=4</code> sets the height of the plot, <code>kind='hist'</code> specifies that it's a histogram plot, and <code>color='g'</code> sets the color of the plot.</li>
+  <li><code>.set(title='No of songs - per year')</code>: This line of code sets the title for the histogram plot.</li>
+</ul>
+
 
   <li>Line Graph: Duration of Songs Over Each Year</li>
 
@@ -304,6 +346,15 @@ plt.xticks(rotation=90)
 ```
 <h6>Answer:</h6>
 <img width="600" alt="Coding" src="https://github.com/Mariyajoseph24/Spotify_Data_Analysis_Python_Project/assets/91487663/34f4e389-b441-425a-8456-ab98d5bd96ec">
+<ul>
+  <li><code>total_dr = sp_tracks.duration</code>: This line of code creates a new variable <code>total_dr</code> and assigns the values from the 'duration' column of the 'sp_tracks' DataFrame to it.</li>
+  <li><code>fig_dims = (15, 5)</code>: This line of code sets the dimensions of the figure for the upcoming visualization.</li>
+  <li><code>fig, ax = plt.subplots(figsize=fig_dims)</code>: This line of code uses Matplotlib to create a subplot figure with the specified dimensions. It returns two variables: <code>fig</code> (the figure) and <code>ax</code> (the axis).</li>
+  <li><code>fig = sns.barplot(x=years, y=total_dr, ax=ax, errwidth=False)</code>: This line of code uses Seaborn's <code>barplot()</code> function to create a bar plot. It plots the 'years' on the x-axis and 'total_dr' (duration) on the y-axis, using the provided axis <code>ax</code>. The <code>errwidth=False</code> argument disables error bars.</li>
+  <li><code>.set(title='Years vs Duration')</code>: This line of code sets the title for the bar plot.</li>
+  <li><code>plt.xticks(rotation=90)</code>: This line of code rotates the x-axis tick labels for better readability.</li>
+</ul>
+
 
   <li>Horizontal Bar Plot: Song Duration Across Different Genres</li>
 
@@ -316,6 +367,14 @@ plt.ylabel('Genres')
 ```
 <h6>Answer:</h6>
 <img width="400" alt="Coding" src="https://github.com/Mariyajoseph24/Spotify_Data_Analysis_Python_Project/assets/91487663/944cdf33-f60e-48da-bcb3-4776d8bc8125">
+<ul>
+  <li><code>plt.title('Duration of songs in different Genres')</code>: This line of code sets the title for the upcoming visualization using Matplotlib.</li>
+  <li><code>sns.color_palette('crest', as_cmap=True)</code>: This line of code sets the color palette for the visualization. The 'crest' palette is being used here.</li>
+  <li><code>sns.barplot(y='genre', x='duration_ms', data=sp_feature)</code>: This line of code uses Seaborn's <code>barplot()</code> function to create a bar plot. It plots the 'genre' on the y-axis and 'duration_ms' on the x-axis from the 'sp_feature' DataFrame.</li>
+  <li><code>plt.xlabel('Duration in ms')</code>: This line of code sets the label for the x-axis.</li>
+  <li><code>plt.ylabel('Genres')</code>: This line of code sets the label for the y-axis.</li>
+</ul>
+
 
   <li>Bar Plot: Top Five Genres by Popularity</li>
 
@@ -327,5 +386,12 @@ sns.barplot(y = 'genre', x = 'popularity', data = Top).set(title='Genres by Popu
 ```
 <h6>Answer:</h6>
 <img width="400" alt="Coding" src="https://github.com/Mariyajoseph24/Spotify_Data_Analysis_Python_Project/assets/91487663/09b75262-dc3e-4314-b21e-08db24de6e1e">
+<ul>
+  <li><code>sns.set_style(style='darkgrid')</code>: This line of code sets the style of the Seaborn plots to 'darkgrid' style, which includes a dark grid in the background of the plot.</li>
+  <li><code>plt.figure(figsize=(8, 4))</code>: This line of code sets the figure size for the upcoming visualization using Matplotlib.</li>
+  <li><code>Top = sp_feature.sort_values('popularity', ascending=False)[:10]</code>: This line of code creates a new DataFrame <code>Top</code> by sorting the 'sp_feature' DataFrame in descending order based on the 'popularity' column and selecting the top 10 rows.</li>
+  <li><code>sns.barplot(y='genre', x='popularity', data=Top).set(title='Genres by Popularity-Top 5')</code>: This line of code uses Seaborn's <code>barplot()</code> function to create a bar plot. It plots the 'genre' on the y-axis and 'popularity' on the x-axis from the <code>Top</code> DataFrame. The <code>.set()</code> function sets the title for the plot.</li>
+</ul>
+
 
   </ol>
