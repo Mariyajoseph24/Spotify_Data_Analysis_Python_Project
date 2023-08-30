@@ -53,6 +53,7 @@ sp_feature = pd.read_csv('D:/spotifydata/SpotifyFeatures.csv')
 #viewing the tracks data
 sp_tracks.head()
 ```
+<p>NOTE:The image provided is not the entirety of the complete image, as there are restrictions in capturing full images through screenshots. To access the comprehensive table, please refer to the Jupyter notebook folder within this repository.</p>
 <h6>Answer:</h6>
 <img width="400" alt="Coding" src="https://github.com/Mariyajoseph24/Spotify_Data_Analysis_Python_Project/assets/91487663/b778a861-fbf5-49ec-87f8-54f6db2c5721">
 
@@ -60,7 +61,7 @@ sp_tracks.head()
 #viewing the feature data
 sp_feature.head()
 ```
-
+<p>NOTE:The image provided is not the entirety of the complete image, as there are restrictions in capturing full images through screenshots. To access the comprehensive table, please refer to the Jupyter notebook folder within this repository.</p>
 <h6>Answer:</h6>
 <img width="400" alt="Coding" src="https://github.com/Mariyajoseph24/Spotify_Data_Analysis_Python_Project/assets/91487663/11c99ded-b241-485d-a618-ba8b17c7ed75">
 
