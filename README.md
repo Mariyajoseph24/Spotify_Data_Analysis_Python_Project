@@ -167,7 +167,7 @@ sp_tracks.describe().transpose()
   <li><code>#descriptive statistics of tracks</code>: This comment indicates that the following line of code is intended to compute and display descriptive statistics of the 'sp_tracks' DataFrame.</li>
   <li><code>sp_tracks.describe().transpose()</code>: This line of code calls the <code>describe()</code> method on the 'sp_tracks' DataFrame, which calculates various summary statistics for each numeric column in the DataFrame. The <code>.transpose()</code> method is then used to transpose the resulting statistics table, making it easier to read with columns as rows and vice versa.</li>
 </ul>
-
+<br>
 
 ```python
 #descriptive of feature
@@ -179,7 +179,7 @@ sp_feature.describe().transpose()
   <li><code>#descriptive statistics of feature</code>: This comment indicates that the following line of code is intended to compute and display descriptive statistics of the 'sp_feature' DataFrame.</li>
   <li><code>sp_feature.describe().transpose()</code>: This line of code calls the <code>describe()</code> method on the 'sp_feature' DataFrame, which calculates various summary statistics for each numeric column in the DataFrame. The <code>.transpose()</code> method is then used to transpose the resulting statistics table, making it easier to read with columns as rows and vice versa.</li>
 </ul>
-
+<br>
 
   <li>Discovering the Top 10 Popular Songs in the Spotify Dataset</li>
 
@@ -195,7 +195,7 @@ b[['name','popularity','artists']]
   <li><code>b = a[a['popularity'] > 90].sort_values('popularity', ascending=False)[:10]</code>: This line of code creates a new DataFrame <code>b</code> by selecting rows from the DataFrame <code>a</code> where the 'popularity' column is greater than 90. The DataFrame is then sorted in descending order based on the 'popularity' column, and the first 10 rows are selected. This effectively gives you the top 10 most popular tracks.</li>
   <li><code>b[['name', 'popularity', 'artists']]</code>: This line of code selects specific columns ('name', 'popularity', and 'artists') from the DataFrame <code>b</code> created in the previous line. This will display the names, popularity values, and artist information of the top 10 most popular tracks.</li>
 </ul>
-
+<br>
 
   <li>Setting Release Date as the Index Column</li>
 
@@ -211,7 +211,7 @@ sp_tracks.head()
   <li><code>sp_tracks.index = pd.to_datetime(sp_tracks.index)</code>: This line of code converts the index of the 'sp_tracks' DataFrame to a datetime format using the <code>pd.to_datetime()</code> function. This is often done to ensure that the index represents dates in a meaningful way, allowing for time-based operations.</li>
   <li><code>sp_tracks.head()</code>: This line of code calls the <code>head()</code> method on the 'sp_tracks' DataFrame, which will display the first few rows of the DataFrame with the updated index.</li>
 </ul>
-
+<br>
 
   <li>Extracting Artist Name from the 18th Row of the Dataset</li>
 
@@ -223,7 +223,7 @@ sp_tracks[['artists']].iloc[18]
 <ul>
   <li><code>sp_tracks[['artists']].iloc[18]</code>: This line of code selects the 'artists' column from the 'sp_tracks' DataFrame and then uses the <code>iloc[18]</code> indexer to retrieve the value at the 18th row of the 'artists' column. This will display the artists' information for the track at index 18.</li>
 </ul>
-
+<br>
 
   <li>Converting Song Duration from Milliseconds to Seconds</li>
 
@@ -239,7 +239,7 @@ sp_tracks.duration.head()
   <li><code>sp_tracks.drop('duration_ms', inplace=True, axis=1)</code>: This line of code removes the original 'duration_ms' column from the 'sp_tracks' DataFrame. The <code>inplace=True</code> argument makes the change directly to the DataFrame.</li>
   <li><code>sp_tracks.duration.head()</code>: This line of code displays the first few values from the newly created 'duration' column in the 'sp_tracks' DataFrame.</li>
 </ul>
-
+<br>
 
   <li>Visualization: Pearson Correlation Heatmap for Two Variables</li>
 
@@ -259,7 +259,7 @@ hmap.set_xticklabels(hmap.get_xticklabels(), rotation=90)
   <li><code>hmap.set_title('Correlation HeatMap')</code>: This line of code sets the title for the heatmap visualization.</li>
   <li><code>hmap.set_xticklabels(hmap.get_xticklabels(), rotation=90)</code>: This line of code rotates the x-axis labels of the heatmap for better readability.</li>
 </ul>
-
+<br>
 
   <li>Creating a 4% Sample of the Entire Dataset</li>
 
@@ -273,7 +273,7 @@ print(len(sample_sp))
   <li><code>sample_sp = sp_tracks.sample(int(0.004 * len(sp_tracks)))</code>: This line of code creates a random sample of the 'sp_tracks' DataFrame. The <code>sample()</code> function is used to select a random subset of rows. The argument <code>int(0.004 * len(sp_tracks))</code> determines the number of rows to be sampled. In this case, it's approximately 0.4% of the total number of rows in the 'sp_tracks' DataFrame.</li>
   <li><code>print(len(sample_sp))</code>: This line of code prints the length (number of rows) of the <code>sample_sp</code> DataFrame to the console. This will show you the number of rows in the sampled subset.</li>
 </ul>
-
+<br>
 
   <li>Regression Plot of Loudness vs. Energy with Regression Line</li>
 
@@ -288,7 +288,7 @@ sns.regplot(data=sample_sp, y='loudness', x='energy', color='#054907').set(title
   <li><code>sns.regplot(data=sample_sp, y='loudness', x='energy', color='#054907')</code>: This line of code uses Seaborn's <code>regplot()</code> function to create a regression plot. It visualizes the relationship between the 'loudness' and 'energy' columns from the <code>sample_sp</code> DataFrame. The <code>color='#054907'</code> argument sets the color of the plot.</li>
   <li><code>.set(title='Regression Plot - Loudness vs Energy Correlation')</code>: This line of code sets the title for the regression plot.</li>
 </ul>
-
+<br>
 
   <li>Regression Plot of Popularity vs. Acousticness with Regression Line</li>
 
@@ -303,7 +303,7 @@ sns.regplot(data=sample_sp, y='popularity', x='acousticness', color='#008000').s
   <li><code>sns.regplot(data=sample_sp, y='popularity', x='acousticness', color='#008000')</code>: This line of code uses Seaborn's <code>regplot()</code> function to create a regression plot. It visualizes the relationship between the 'popularity' and 'acousticness' columns from the <code>sample_sp</code> DataFrame. The <code>color='#008000'</code> argument sets the color of the plot.</li>
   <li><code>.set(title='Regression Plot - Popularity vs Acousticness Correlation')</code>: This line of code sets the title for the regression plot.</li>
 </ul>
-
+<br>
 
   <li>Adding a New Column to the Tracks Table</li>
 
@@ -321,7 +321,7 @@ sp_tracks.head()
   <li><code>years = sp_tracks.dates.dt.year</code>: This line of code extracts the year component from the 'dates' column using the <code>dt.year</code> attribute of the datetime objects. It assigns the extracted years to the 'years' variable.</li>
   <li><code>sp_tracks.head()</code>: This line of code displays the first few rows of the modified 'sp_tracks' DataFrame, which now includes the 'dates' column and the extracted 'years' variable.</li>
 </ul>
-
+<br>
 
   <li>Graph: Number of Songs per Year</li>
 
@@ -334,7 +334,7 @@ sns.displot(years, discrete=True, aspect=2, height=4, kind='hist',color='g').set
   <li><code>sns.displot(years, discrete=True, aspect=2, height=4, kind='hist', color='g')</code>: This line of code uses Seaborn's <code>displot()</code> function to create a histogram plot. It visualizes the distribution of the 'years' variable, which contains the release years of the songs. The <code>discrete=True</code> argument indicates that the data is discrete (years), <code>aspect=2</code> adjusts the width-to-height ratio of the plot, <code>height=4</code> sets the height of the plot, <code>kind='hist'</code> specifies that it's a histogram plot, and <code>color='g'</code> sets the color of the plot.</li>
   <li><code>.set(title='No of songs - per year')</code>: This line of code sets the title for the histogram plot.</li>
 </ul>
-
+<br>
 
   <li>Line Graph: Duration of Songs Over Each Year</li>
 
@@ -355,7 +355,7 @@ plt.xticks(rotation=90)
   <li><code>.set(title='Years vs Duration')</code>: This line of code sets the title for the bar plot.</li>
   <li><code>plt.xticks(rotation=90)</code>: This line of code rotates the x-axis tick labels for better readability.</li>
 </ul>
-
+<br>
 
   <li>Horizontal Bar Plot: Song Duration Across Different Genres</li>
 
@@ -375,7 +375,7 @@ plt.ylabel('Genres')
   <li><code>plt.xlabel('Duration in ms')</code>: This line of code sets the label for the x-axis.</li>
   <li><code>plt.ylabel('Genres')</code>: This line of code sets the label for the y-axis.</li>
 </ul>
-
+<br>
 
   <li>Bar Plot: Top Five Genres by Popularity</li>
 
