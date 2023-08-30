@@ -153,6 +153,7 @@ a[['name','popularity']]
   <li><code>a = sp_tracks.sort_values('popularity', ascending=True)[0:10]</code>: This line of code creates a new DataFrame <code>a</code> by sorting the 'sp_tracks' DataFrame based on the 'popularity' column in ascending order. The <code>[0:10]</code> notation selects the first 10 rows of the sorted DataFrame, effectively selecting the 10 least popular tracks.</li>
   <li><code>a[['name', 'popularity']]</code>: This line of code selects specific columns, namely 'name' and 'popularity', from the DataFrame <code>a</code> created in the previous line. This will show the names of the 10 least popular tracks along with their corresponding popularity values.</li>
 </ul>
+<br>
 
   <li>Descriptive Statistics </li>
 
