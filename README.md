@@ -139,7 +139,7 @@ sp_feature.info()
 </ul>
 
 ----------------------------------------------------------------------------
-  <h1><a name="extractinginsightsfromthedatasetthroughanalysis">Extracting Insights from the Dataset through Analysis</a></h1>
+  <h1><a name="extractinginsightsfromthedatasetthroughanalysis">Extracting Insights from the Dataset through Analysis📊</a></h1>
   <ol>
   <li>Exploring the 10 Least Popular Songs in the Spotify Dataset</li>
 
